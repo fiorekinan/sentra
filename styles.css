@@ -1,5 +1,11 @@
 :root {
-    --primary: #002F64;
-    --secondary: #CFEBFF;
-    --accent-color: #F0F0F0;
+    --biru: #04C4D9;
+    --biru-muda: #CAF1F5;
+    --orange: #FE6B03;
+    --orange-muda: #FCDFCA;
+    --teal: #00A384;
+    --kuning: #FCC21B;
+    --putih-primary: #FCFCFC;
+    --abu-satu: #EBEBEB;
+    --abu-dua: #E0E0E0;
 }
