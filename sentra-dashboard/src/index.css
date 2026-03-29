@@ -1,0 +1,31 @@
+:root {
+  --biru: #04C4D9;
+  --biru-muda: #CAF1F5;
+  --merah: #F2624E;
+  --orange: #FE6B03;
+  --orange-muda: #FCDFCA;
+  --teal: #00A384;
+  --teal-muda: #CAEAE4;
+  --kuning: #FCC21B;
+  --putih-primary: #FCFCFC;
+  --abu-satu: #EBEBEB;
+  --abu-dua: #E0E0E0;
+  --divider: #D9D9D9;
+  --font-main: 'Power Grotesk', sans-serif;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--putih-primary);
+  margin: 0;
+}
+
+@font-face {
+  font-family: 'Power Grotesk';
+  src: url('font/fonnts.com-powergrotesk-bold.otf') format('truetype');
+  font-weight: 700;
+}
+
+body {
+  font-family: 'Power Grotesk', sans-serif;
+}

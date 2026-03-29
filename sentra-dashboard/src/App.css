@@ -1,0 +1,380 @@
+/* Dashboard */
+.dashboard-wrapper {
+  padding: 30px 60px;
+  background-color: var(--putih-primary);
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.dashboard-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 80px;
+}
+
+.brand-container { display: flex; align-items: center; gap: 10px; }
+.brand-logo-img { height: 30px; }
+.user-profile-icon { width: 40px; }
+
+/* Input Mood */
+.input-mood-card {
+  display: flex;
+  width: 100%;
+  max-width: 1400px;
+  min-height: 580px;
+  border: 1px solid var(--divider);
+  border-radius: 30px;
+  overflow: hidden;
+  margin: 0 auto;
+  background: var(--putih-primary);
+  margin-bottom: 100px;
+}
+
+.input-mood {
+  width: 50%;
+  padding: 30px;
+  border-right: 1px solid var(--divider);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.calendar {
+  width: 55%;
+  padding: 30px;
+  background-color: var(--abu-satu);
+  display: flex;
+  flex-direction: column;
+}
+
+.mood-carousel {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  padding: 10px 0;
+  margin-bottom: 5px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.mood-carousel::-webkit-scrollbar {
+  display: none;
+}
+.mood-carousel {
+  scrollbar-width: none;
+}
+
+.mood-card-img {
+  height: 120px;
+  flex-shrink: 0;
+  cursor: pointer;
+  border-radius: 14px;
+  transition: transform 0.2s;
+  scroll-snap-align: start;
+}
+
+.mood-card-img.active {
+  box-shadow: 0 0 0 3px var(--biru);
+}
+
+.divider-dashed {
+  border-top: 2px dashed var(--divider);
+  margin: 15px 0;
+}
+
+.journal-input {
+  flex-grow: 1;
+  background: var(--abu-satu);
+  border: none;
+  border-radius: 20px;
+  padding: 20px;
+  margin-bottom: 20px;
+  resize: none;
+  font-family: inherit;
+}
+
+.btn-submit {
+  background-color: var(--biru);
+  color: white;
+  border: none;
+  border-radius: 15px;
+  padding: 15px;
+  font-weight: 600;
+  width: 100%;
+}
+
+.btn-submit:hover {
+  opacity: 0.9;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.month-tag {
+  background-color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 12px;
+  font-size: 18px;
+}
+
+.nav-btn {
+  background-color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 24px;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+}
+
+.day-box {
+  background: white;
+  aspect-ratio: 1/1;
+  border-radius: 12px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.date-num {
+  font-size: 15px;
+  font-weight: 600;
+  color: #333;
+  position: relative;
+  z-index: 2;
+}
+
+.doc-icon {
+  width: 12px;
+  height: auto;
+  margin-top: 2px;
+  display: block;
+  position: relative;
+  z-index: 2;
+}
+
+.mood-emoji-calendar {
+  width: 70%;
+  height: auto;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.day-box.today {
+  background-color: var(--kuning);
+}
+
+.day-box.empty {
+  background-color: var(--divider);
+  opacity: 0.6;
+}
+
+.day-box.empty { background-color: var(--divider); opacity: 0.5; }
+
+/* Mood Summary */
+.mood-summary-section {
+  width: 100%;
+  max-width: 1400px;
+  margin: 100px auto;
+  
+}
+
+.main-combined-card {
+  background: white;
+  border: 1px solid var(--divider);
+  border-radius: 25px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.combined-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.main-panel-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.report-link {
+  color: var(--biru);
+  text-decoration: underline;
+  font-size: 0.9rem;
+}
+
+.combined-content-wrapper {
+  display: flex;
+  gap: 20px;
+  align-items: stretch;
+}
+
+.chart-grey-box {
+  flex: 3;
+  background-color: var(--putih-primary);
+  border: 1px solid var(--divider);
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.chart-inner-header {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.filter-dropdown {
+  background: white;
+  border: 1px solid var(--divider);
+  padding: 8px 15px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+}
+
+.pie-render-area {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.pie-size-fix {
+  width: 300px;
+  height: 300px;
+}
+
+/* AI Summarize */
+.ai-white-box {
+  flex: 1;
+  border: 1px solid var(--divider);
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ai-subtitle {
+  font-size: 1rem;
+  color: #333;
+  margin: 0;
+}
+
+.ai-icon-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+.ai-icon-img {
+  width: 80px;
+  opacity: 0.4;
+}
+
+.btn-summarize {
+  background-color: var(--orange);
+  color: white;
+  border: none;
+  border-radius: 15px;
+  padding: 15px;
+  width: 100%;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Footer */
+.footer-section {
+  width: 100%;
+  background-color: var(--teal);
+  padding: 80px 0 40px 0;
+  margin-top: 100px;
+}
+
+.footer-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 60px;
+  box-sizing: border-box;
+}
+
+.footer-main-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.footer-brand-col {
+  flex: 1;
+}
+
+.footer-logo-img {
+  width: 500px;
+  height: auto;
+}
+
+.footer-links-grid {
+  display: flex;
+  gap: 100px;
+  flex: 2;
+  justify-content: flex-end;
+}
+
+.footer-title {
+  font-weight: 700;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.copyright {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+  margin-top: 40px;
+  text-align: center;
+  padding-top: 30px;
+}
