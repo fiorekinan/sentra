@@ -19,26 +19,26 @@
     </nav>
 
     <!-- hero -->
-     <section>
+    <section>
         <div class="container hero-container my-5">
             <div class="card custom-card text-center position-relative">
-    
+
                 <img src="assets/Star.svg" class="star star-left">
-    
+
                 <img src="assets/Star.svg" class="star star-right">
-    
+
                 <img src="assets/Sentra Hero.svg" class="logo-img">
-    
+
                 <div class="card-body">
                     <h3>
                         No matter your problems are, <br>
                         put your mood in <span class="highlight"><img src="assets/Sentra Icon.svg" alt=""></span>
                     </h3>
                 </div>
-    
+
             </div>
         </div>
-    
+
         <!-- scroll tag -->
         <div class="tag-container my-5">
             <div class="scroll-wrapper">
@@ -52,7 +52,7 @@
                     <span class="tag">Kesiangan</span>
                     <span class="tag">Laptop Hang</span>
                     <span class="tag">Error Code</span>
-    
+
                     <!-- duplicate -->
                     <span class="tag">Belajar MTK</span>
                     <span class="tag">Kopi Tumpah</span>
@@ -66,7 +66,7 @@
                 </div>
             </div>
         </div>
-     </section>
+    </section>
 
     <!-- divider -->
     <hr class="divider my-5">
@@ -176,6 +176,67 @@
     <!-- divider -->
     <hr class="divider my-5">
 
+    <section class="faq-section my-5">
+        <h1 class="text-center mb-4">FAQ</h1>
+
+        <div class="container">
+            <div class="row g-4 justify-content-center">
+
+                <!-- ITEM 1 -->
+                <div class="col-md-4 text-center">
+                    <div class="faq-item" onclick="openFAQ(1)">
+                        <img src="assets/folder1.svg" class="faq-img">
+                        <p class="faq-question">What is Sentra <br> about?</p>
+                    </div>
+                </div>
+
+                <!-- ITEM 2 -->
+                <div class="col-md-4 text-center">
+                    <div class="faq-item" onclick="openFAQ(2)">
+                        <img src="assets/folder2.svg" class="faq-img">
+                        <p class="faq-question">Is my personal data <br>
+                            private?</p>
+                    </div>
+                </div>
+
+                <!-- ITEM 3 -->
+                <div class="col-md-4 text-center">
+                    <div class="faq-item" onclick="openFAQ(3)">
+                        <img src="assets/folder3.svg" class="faq-img">
+                        <p class="faq-question">How often should i track <br>
+                            my mood?</p>
+                    </div>
+                </div>
+
+                <!-- BARIS 2 -->
+                <div class="col-md-4 text-center">
+                    <div class="faq-item" onclick="openFAQ(4)">
+                        <img src="assets/folder3.svg" class="faq-img">
+                        <p class="faq-question">Can i see my mood <br>
+                            history?</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 text-center">
+                    <div class="faq-item" onclick="openFAQ(5)">
+                        <img src="assets/folder4.svg" class="faq-img">
+                        <p class="faq-question">Can tracking my mood <br>
+                            improve my habits?</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 text-center">
+                    <div class="faq-item" onclick="openFAQ(6)">
+                        <img src="assets/folder5.svg" class="faq-img">
+                        <p class="faq-question">How does Sentra show <br>
+                            my mood patterns?</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
     <!-- footer -->
     <footer>
         <div class="container py-2">
@@ -225,7 +286,44 @@
         </div>
     </footer>
 
+    <!-- overlay -->
+    <div id="faqOverlay" class="faq-overlay" onclick="closeFAQ()"></div>
+
+    <!-- popup -->
+    <div id="faqModal" class="faq-modal">
+        <div class="faq-card">
+            <img id="faqImage" src="" alt="">
+        </div>
+    </div>
+   
+
+    <!-- JS -->
+    <script src="./bootstrap/js/bootstrap.min.js"></script>
+
+    <script>
+      function openFAQ(num) {
+    const modal = document.getElementById("faqModal");
+    const overlay = document.getElementById("faqOverlay");
+    const img = document.getElementById("faqImage");
+
+    // reset dulu (INI KUNCI)
+    modal.classList.remove("show");
+    overlay.style.display = "none";
+
+    setTimeout(() => {
+        img.src = "assets/answer-" + num + ".svg";
+
+        modal.classList.add("show");
+        overlay.style.display = "block";
+    }, 50);
+}
+
+function closeFAQ() {
+    document.getElementById("faqModal").classList.remove("show");
+    document.getElementById("faqOverlay").style.display = "none";
+}
+    </script>
+
 </body>
-<script src="./bootstrap/js/bootstrap.min.js"></script>
 
 </html>
